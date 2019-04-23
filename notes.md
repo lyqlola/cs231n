@@ -1,5 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 **<font size=4>Lec1: Introduction</font>**\
 cs231n focus: image classification\
 \
