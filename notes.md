@@ -9,16 +9,16 @@ cs231n focus: image classification\
 \
 **<font size=4>Lec3: Loss Functions and Optimization</font>**\
 1.**Multiclass SVM loss** [SVM之Hinge Loss解释][1] \
-\begin{aligned}
-L_i &=\sum_{j\neq y_i} 
-\left. \{
-  \begin{array}{l}
-  0 & if  s_{y_i}\ge s_j+1\\
-  s_j-s_{y_i}+1 & otherwise
-  \end{array}
-  \right. \\
-  &=\sum_{j\neq y_i}max(0, s_j-s_{y_i}+1)
-  \end{aligned}
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+  \begin{equation}
+    o=g(h)=\begin{cases}
+              1 & \text{if $ h < 0 $}\\
+              0 & \text{if $ h \le 0$}
+\end{cases}
+\end{equation}
+\end{document}
 
 \
 2.**Regularization**\
