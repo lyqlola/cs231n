@@ -10,20 +10,17 @@ cs231n focus: image classification\
 2.linear classifier: score = f(W, x)\
 \
 **<font size=4>Lec3: Loss Functions and Optimization</font>**\
-1.**Multiclass SVM loss** [SVM之Hinge Loss解释][1] \
+1.**Multiclass SVM loss** [SVM之Hinge Loss解释][1]
 $$\begin{aligned}
-L_i &=\sum_{j\neq y_i} 
-\left\{
-  \begin{array}{l}
+  L_i &=\sum_{j\neq y_i} 
+\begin{cases}
   0 & if  s_{y_i}\ge s_j+1\\
   s_j-s_{y_i}+1 & otherwise
-  \end{array}
-  \right. \\
-  &=\sum_{j\neq y_i}max(0, s_j-s_{y_i}+1)
-  \end{aligned}
-  $$
+\end{cases} \\
+&=\sum_{j\neq y_i}max(0, s_j-s_{y_i}+1)
+\end{aligned}
+$$
 
-\
 2.**Regularization**\
 <img src="Regularization.png" width = "400" height = "200"> \
 \
@@ -255,7 +252,17 @@ Caffe: https://github.com/BVLC/caffe/wiki/Model-Zoo \
 TensorFlow: https://github.com/tensorflow/models \
  PyTorch: https://github.com/pytorch/vision
 
-**<font size=4>Lec 8: Deep Learning Software</font>**
+**<font size=4>Lec 8: Deep Learning Software</font>** *check slides*\
+1.**Deep Learning framework**
 - Theano / TensorFlow
 - Torch / PyTorch
 - Caffe / Caffe2
+  
+2.**Static vs Dynamic Graphs**
+
+**<font size=4>Lec 9: CNN Architectures</font>**\
+1.**Case Studies**
+- AlexNet
+- VGG
+- GoogLeNet
+- ResNet
