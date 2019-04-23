@@ -9,13 +9,11 @@ cs231n focus: image classification\
 \
 **<font size=4>Lec3: Loss Functions and Optimization</font>**\
 1.**Multiclass SVM loss** [SVM之Hinge Loss解释][1] \
-\usepackage{amsmath}
-\begin{document}
-  \begin{equation}
-    o=g(h)=\begin{cases}
-              1 & \text{if $ h < 0 $}\\
-              0 & \text{if $ h \le 0$}
-\end{cases}
+\begin{equation}
+o=g(h)=\left\{\begin{array}{rcl}
+    1 & if & h <   0 \\
+    0 & if & h \le 0 
+\end{array}\right.
 \end{equation}
 
 \
