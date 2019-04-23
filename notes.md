@@ -9,7 +9,6 @@ cs231n focus: image classification\
 \
 **<font size=4>Lec3: Loss Functions and Optimization</font>**\
 1.**Multiclass SVM loss** [SVM之Hinge Loss解释][1] \
-\documentclass{article}
 \usepackage{amsmath}
 \begin{document}
   \begin{equation}
@@ -18,7 +17,6 @@ cs231n focus: image classification\
               0 & \text{if $ h \le 0$}
 \end{cases}
 \end{equation}
-\end{document}
 
 \
 2.**Regularization**\
