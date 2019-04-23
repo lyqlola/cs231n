@@ -11,7 +11,7 @@ cs231n focus: image classification\
 1.**Multiclass SVM loss** [SVM之Hinge Loss解释][1] \
 \begin{aligned}
 L_i &=\sum_{j\neq y_i} 
-\left \{
+\left. \{
   \begin{array}{l}
   0 & if  s_{y_i}\ge s_j+1\\
   s_j-s_{y_i}+1 & otherwise
