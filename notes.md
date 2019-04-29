@@ -20,10 +20,10 @@ $$\begin{aligned}
 $$
 
 2.**Regularization**\
-<img src="Regularization.png" width = "400" height = "200"> \
+<img src="pics/Regularization.png" width = "400" height = "200"> \
 \
 3.**Softmax Classifier** (Multinomial Logistic Regression)\
-<img src="softmax.png" width = "400" height = "200">
+<img src="pics/softmax.png" width = "400" height = "200">
 \
 4.**Softmax vs. SVM** \
 [Support Vector Machine vs Logistic Regression][2]
@@ -35,14 +35,14 @@ $$
 \
 **Lec4: Backpropagation and Neural Networks**\
 1.Backpropagation chain rule: [local gradient] x [upstream gradient]
-<img src="backprop.png" width = "400" height = "200"> \
+<img src="pics/backprop.png" width = "400" height = "200"> \
 add gate: gradient distributor\
 max gate: gradient router\
 mul gate: gradient switcher\
 Gradients add at branches
 
 2.Gradients for vectorized code: [Jacobian matrix][3] \
-<img src="vectorized gradient.png" width = "400" height = "200"> \
+<img src="pics/vectorized gradient.png" width = "400" height = "200"> \
 !!Always check: The gradient with respect to a variable should have the same shape as the variable
 
 [3]: https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant
@@ -51,14 +51,14 @@ Gradients add at branches
 **<font size=4>Lec5: Convolutional Neural Networks</font>**\
 1.**convolution layer**: Use convolutional layers to preserve 
 the spatial structure
-<img src="filters.png" width = "500" height = "250"> \
+<img src="pics/filters.png" width = "500" height = "250"> \
 ConvNet is a sequence of Convolutional Layers, interspersed with activation functions(eg.ReLu).
 filter: receptive field.\
 
 2.**pooling layer**(没有引入参数)
-<img src="pooling layer.png" width = "420" height = "250">
+<img src="pics/pooling layer.png" width = "420" height = "250">
 - max pooling:
-<img src="max pooling.png" width = "500" height = "200"> 
+<img src="pics/max pooling.png" width = "500" height = "200"> 
 
 3.**Summary**
 - ConvNets stack CONV,POOL,FC layers
@@ -79,23 +79,23 @@ babysitting the learning process, parameter updates, hyperparameter optimization
 3)Evaluation\
  model ensembles
 
-1.**Activation Functions** 
-<img src="activation func.png" width = "380" height = "170"> \
+1.**Activation Functions** \
+<img src="pics/activation func.png" width = "380" height = "170"> \
 (1)**sigmoid函数**\
-<img src="sigmoid.png" width = "400" height = "200"> \
-<img src="sigmoid1.png" width = "400" height = "200"> \
+<img src="pics/sigmoid.png" width = "400" height = "200"> \
+<img src="pics/sigmoid1.png" width = "400" height = "200"> \
 (2)**tanh函数**\
-<img src="tanh.png" width = "400" height = "150"> \
+<img src="pics/tanh.png" width = "400" height = "150"> \
 (3)**ReLU函数**\
-<img src="ReLU.png" width = "400" height = "180"> \
-<img src="ReLU1.png" width = "400" height = "220"> \
+<img src="pics/ReLU.png" width = "400" height = "180"> \
+<img src="pics/ReLU1.png" width = "400" height = "220"> \
 (4)**Leaky ReLU函数**\
-<img src="leaky ReLU.png" width = "480" height = "200"> \
+<img src="pics/leaky ReLU.png" width = "480" height = "200"> \
 (5)**ELU函数**\
-<img src="ELU.png" width = "480" height = "200">
+<img src="pics/ELU.png" width = "480" height = "200">
 
 (6)**Maxout “Neuron”** [Goodfellow et al., 2013]\
-<img src="maxout.png" width = "330" height = "130">
+<img src="pics/maxout.png" width = "330" height = "130">
 
 **In practice:**
 - Use ReLU. Be careful with your learning rates
@@ -104,7 +104,7 @@ babysitting the learning process, parameter updates, hyperparameter optimization
 - Don’t use sigmoid
 
 2.**Data Preprocessing**\
-<img src="image preprocess.png" width = "400" height = "200">\
+<img src="pics/image preprocess.png" width = "400" height = "200">\
 
 3.**Weight Initialization**\
 (1) ``W=0``\
@@ -123,8 +123,8 @@ Want: variance of the input to be the same as variance of the output\
 ``W = np.random.randn(fan_in, fan_out) * sqrt(2.0/fan_in)``
 
 4.**Batch Normalization**\
-<img src="BN.png" width = "400" height = "190">\
-<img src="BN1.png" width = "500" height = "200">\
+<img src="pics/BN.png" width = "400" height = "190">\
+<img src="pics/BN1.png" width = "500" height = "200">\
 *Note*: 
 - BatchNorm layer usually inserted after Fully Connected or Convolutional layers, and before nonlinearity.
 - At test time BatchNorm layer functions differently:
@@ -168,16 +168,16 @@ If the cost is ever > 3 * original cost, break out early*\
 **I.Optimization**\
 1.**Problems with SGD**\
 1.1.**Poor Conditioning**\
-<img src="SGD.png" width = "530" height = "230">\
+<img src="pics/SGD.png" width = "530" height = "230">\
 1.2.**Local Optima**\
-<img src="SGD1.png" width = "450" height = "200">\
+<img src="pics/SGD1.png" width = "450" height = "200">\
 1.3.**Gradient Noise**\
-<img src="SGD2.png" width = "450" height = "200">
+<img src="pics/SGD2.png" width = "450" height = "200">
 
 2.**SGD + Momentum**\
-<img src="SGD+Momentum.png" width = "450" height = "200">\
+<img src="pics/SGD+Momentum.png" width = "450" height = "200">\
 **Nesterov Momentum**\
-<img src="Nesterov.png" width = "450" height = "190">\
+<img src="pics/Nesterov.png" width = "450" height = "190">\
 **Q**: sgd+momentum may overshoot and in some cases it will come back to the minima, but what if it's a sharp minima? will sgd+momentum miss the minima?\
 **A**: the idea of some recent theoretical work is that the sharp minima is bad minima and we dont even want to land into those minima. the sharp minima may be the minima that overfits more. Imagine we double the dataset and the whole optimization landscape would change and those sharp minima may disappear. Flat minima is more robust as we change the training data, hence generalize better to test data. so it's actually a feature rather than a bug that SGD+momentum skips over the sharp minima.
 
@@ -185,15 +185,15 @@ If the cost is ever > 3 * original cost, break out early*\
 **AdaGrad features**\
 (1) When the loss func has high condition number, AdaGrad has the nice property of accelerating movement along one dimension and slowing down movement along the wiggling dimension.\
 (2) Step size gets smaller since the grad_squared term gets larger, may get stuck before reaching the minima, so not commonly used in practice.\
-<img src="AdaGrad+RMSProp.png" width = "500" height = "210">
+<img src="pics/AdaGrad+RMSProp.png" width = "500" height = "210">
 
 4.**Adam**\
-<img src="Adam.png" width = "540" height = "210">
+<img src="pics/Adam.png" width = "540" height = "210">
 
-<img src="opt methods.png" width = "450" height = "210">
+<img src="pics/opt methods.png" width = "450" height = "210">
 
 5.**Learning rate**\
-<img src="learning rate.png" width = "450" height = "220">
+<img src="pics/learning rate.png" width = "450" height = "220">
 
 6.**Second-Order Optimization**\
 second-order Taylor expansion:
@@ -241,8 +241,8 @@ randomly drop layers from the network during training\
 
 **IV.Transfer Learning**\
 1.**Transfer Learning with CNNs**\
-<img src="transfer learning.png" width = "500" height = "220">
-<img src="transfer learning1.png" width = "500" height = "220">\
+<img src="pics/transfer learning.png" width = "500" height = "220">\
+<img src="pics/transfer learning1.png" width = "500" height = "220">\
 2.**Transfer Learning with CNNs is pervasive**: use CNN pretrained on ImageNet and fine tune it or reinitialize part of it for task at hand\
 
 3.Deep learning frameworks provide a **“Model Zoo” of pretrained models** so you don’t need to train your own\
@@ -264,3 +264,88 @@ TensorFlow: https://github.com/tensorflow/models \
 - VGG
 - GoogLeNet
 - ResNet
+  
+**AlexNet**是将CNN成功用于视觉任务的第一个模型；\
+**VGG和GoogLeNet**都诞生于Batch Normalization之前，因此都为了使deeper model收敛而额外做了工作，比如说VGG一开始是训练了11层，之后再随机地增加其他层不断调参得到最终的模型；GoogLeNet则在网络低层增加了auxiliary classifier，不是为了辅助分类，而是为了向网络低层注入梯度。\
+**ResNet**的Residual block起到两个作用：\
+(1)如果将Residual block中的参数都置为0，则这个Residual block就实现了一个identity mapping。因此可以在ResNet中加入l2 norm，因为加上参数的l2 norm会使参数趋于0，在常规的神经网络中，使参数趋于0并不make sense，但在ResNet中，就可以使模型习得有哪些层是不需要的，by driving the Residual block to identity mapping\
+(2)gradient highway for the gradient to flow backward through the entire network
+
+<font color='brown'>**NOTE: Managing gradient flow is important in DL/ML**</font>
+
+<img src="pics/GoogLeNet.png" width = "550" height = "260">
+<img src="pics/ResNet.png" width = "550" height = "260">
+
+2.**最新模型**
+- DenseNet
+- FractalNet
+
+
+**<font size=4>Lec 10: RNN</font>**\
+1.**Recurrence formula**:
+$$
+h_t=f_W(h_{t-1}, x_t)\\
+h_t:\text{new state}\\
+h_{t-1}:\text{old state}\\
+x_t: \text{input}
+$$
+Eg. 
+$$h_t=tanh(W_{hh}h_{t-1}+W_{xh}x_t)\\
+y=W_{hy}h_t$$
+<font color='brown'>Notice: the same function and the same set
+of parameters W are used at every time step.</font>
+
+2.**Two ways to show RNN**\
+<img src="pics/RNN0.png" width = "300" height = "260">
+<img src="pics/RNN.png" width = "500" height = "260">
+
+3.**Truncated Backpropagation through time**\
+SGD in the case of sequence
+
+4.**Multilayer RNNs**
+$$h_t^l=tanh \ W^l(\ 
+  \begin{matrix}
+  h_t^{l-1}\\
+  h_{t-1}^l
+  \end{matrix}
+  ), \ h\in\mathbb{R}^n, \ W^l\ [n\times 2n] $$
+RNN模型的层数不会很深，一般2~4层
+
+5.**Vanilla RNN Gradient Flow**\
+<img src="pics/RNN grad.png" width = "500" height = "130">
+$$\text{Backpropagation from }h_t \text{to } h_{t-1} \text{multiplies by }W \text{(actually }W_{hh}^T )$$
+Computing gradient of h0 involves many factors of W (and repeated tanh)\
+Largest singular value of W > 1: **Exploding gradients** -> **Gradient clipping**: Scale gradient if its norm is too big\
+Largest singular value of W < 1: **Vanishing gradients** -> Change RNN architecture
+
+6.**Long Short Term Memory (LSTM)**\
+*针对上述vanilla RNN会遇到的梯度爆炸和梯度消失问题提出的解决方案*
+
+<img src="pics/lstm formula.png" width = "500" height = "220">
+<img src="pics/lstm0.png" width = "500" height = "240">
+<img src="pics/lstm1.png" width = "500" height = "220">
+<img src="pics/lstm2.png" width = "500" height = "220">
+
+**LSTM相较于vanilla RNN的优点**：
+1. only elementwise multiplication by f, better than full matrix multiplication by W
+2. element-wise multiplication will potentially be multiplying by a different forget gate f at every time step
+3. f来自于sigmoid函数，因此element-wise mult是乘以0~1之间的数，这带来更好的numerical properties
+4. To backpropagate from the final hidden state to the first cell state, then through that backward path, we only backpropagate through a single tanh non linearity rather than through a separate tanh at every time step.
+5. Local gradient on W will be coming through these gradients on c and h. Because we’re maintaining these gradients on c much more nicely in the LSTM case, those local gradient on W at each time step will also be carried forward and backward through time much more cleanly.
+
+**<font size=4>Lec 11: Detection and Segmentation</font>**\
+I.**Semantic Segmentation**\
+1.**FCN**: Design a network as a bunch of convolutional layers to make predictions for pixels all at once!\
+2.**Problem**: convolutions at original image resolution will be computationally expensive and take a lot of memory\
+3.**Solution**: Design network as a bunch of convolutional layers, with <font color='red'>downsampling</font> and <font color='blue'>upsampling</font> inside the network!\
+<img src="pics/fcn.png" width = "600" height = "150">
+
+4.**In-Network upsampling**\
+(1)**Unpooling**\
+<img src="pics/unpooling0.png" width = "600" height = "150">
+
+(2)**Max Unpooling**\
+<img src="pics/unpooling1.png" width = "600" height = "250">
+
+(3)**Transpose Convolution**\
+<img src="pics/unpooling2.png" width = "500" height = "210" align div='center'>
